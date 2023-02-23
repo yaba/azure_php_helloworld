@@ -77,5 +77,5 @@ stages:
               azureSubscription: $(azureSubscription)
               scriptType: 'bash'
               scriptLocation: 'inlineScript'
-              inlineScript: "az webapp deploy --resource-group 'fpolido' --name 'devops-php-test' --src-path '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip' --type zip --clean false --target-path subfolder" 
+              inlineScript: "az webapp deploy --resource-group 'fpolido' --name 'devops-php-test' --src-path '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip' --type zip --clean false --target-path subfolder" 
    
