@@ -75,7 +75,7 @@ stages:
           - task: AzureCLI@2
             inputs:
               azureSubscription: $(azureSubscription)
-              scriptType: 'ps'
+              scriptType: 'pscore'
               scriptLocation: 'inlineScript'
               inlineScript: "az webapp deploy --resource-group 'fpolido' --name 'devops-php-test' --src-path '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip' --type zip --clean false --target-path subfolder" 
    
